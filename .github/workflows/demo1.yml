@@ -1,0 +1,10 @@
+ eazyrooms_booking_service:
+    image: eazyrooms/eazyrooms_booking_service:latest
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3004:3004"
+    networks:
+      - eazyrooms-network
